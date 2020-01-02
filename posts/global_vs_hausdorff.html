@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>A Global Dimension should be a Hausdorff dimension</title>
+<link rel="stylesheet" href="../css/articles.css">
+</head>
+<body>
+<header>
+<h1>A Global Dimension should be a Hausdorff dimension</h1>
+</header>
+<main>
+
+<section>
+<h2>General statement of the problem</h2>
+<p>
+The idea is this.
+Consider the main equation of Theorem 3.19 in <a href="https://arxiv.org/pdf/1310.7050.pdf">this</a>.
+Now consider Exercise 1.7.21 in <a href="https://bookstore.ams.org/gsm-33">this</a>.
+They seem related, don't they?
+</p>
+
+<p>
+Not immediatly, of course.
+You probably need to take logs in Theorem 3.19.
+Even if you do that, there is a coefficient that doesn't quite fit.
+But let me give you more profound reasons.
+</p>
+
+<p>
+Cayley graphs of groups are metric spaces that look 'fractaly'.
+If graphed appropiatly, the Cayley graph of the free group looks like a fractal tree.
+And these fractals have interesting Hausdorff dimensions.
+In this particular instance,
+the ideal boundary with the shadow topology is the Cantor set,
+with Hausdorff dimension <code>log <sub>2</sub> 3</code>.
+</p>
+
+<p>
+On the other hand, modular categories feel a little like groups.
+Like finite ones, in a sense.
+The group of invertibles is literally a finite group.
+Finiteness is the whole point of a lot of these definitions.
+</p>
+
+<p>
+And, moreover, you wouldn't be too simplistic
+if you just think of those categories
+as the representation categories of finite groups,
+because, in fact, they all are representation categories of Hopf algebras.
+finite dimensional ones, I think, but don't quote on that.
+</p>
+</section>
+
+<section>
+<h2>A way forward?</h2>
+<p>
+Consider a finite group, <var>group</var>.
+Let <var>group.rep</var> be its representation category
+and <var>group.cayley</var> its Cayley graph.
+</p>
+
+<p>
+Maybe, a first question to ask is this.
+Given <var>group</var>,
+can I construct some metric space <var>group.space</var>,
+canonically related to <var>group.rep</var>, specially its graphic calculus?
+If so, are the metric properties of <var>group.space</var>
+somehow related to the metric properties of <var>group.cayley</var>?
+If so, does this construction have the property?
+</p>
+<code>space.hausdorffDim = (group.rep).globalDim</code>
+</section>
+
+<section>
+<h2>What is this for?</h2>
+<p>
+Let <var>cat</var> be a fusion category,
+<var>cat.gd</var> its global dimension,
+<var>obj</var> a simple object
+with Frobenious-Perron dimension <var>obj.fp</var>
+</p>
+<p>
+I have a couple of reasons behind thinking about this.
+The frist is that the definition of <var>obj.fp</var>
+seems a little disconnected from the rest of the theory,
+as does <var>cat.gd</var>.
+They play a huge role,
+and they have been explored in some depth,
+but they feel to me a little like misfit pieces of a puzzle.
+If this graph can be constructed,
+and <var>obj.fp</var>, <var>cat.gd</var> can be given some geometrical meaning,
+I would feel much better.
+</p>
+
+<p>
+The second, a more specific application,
+is that maybe it helps give a sharper bound
+on the number of fusion categories with a given rank.
+Zhenghan mentioned in his talk that the argument in the proof of rank finiteness
+doen't give a good upper bound,
+because the number theoretical machinery behind it
+gives a ridiculously fast growing bound
+that isn't even good for rank 4 or something.
+</p>
+</section>
+
+</main>
+</body>
+</html>
