@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>A Quantum Computer to Run a Classical Algorithm</title>
+<link rel="stylesheet" href="../css/articles.css">
+</head>
+<body>
+<header>
+<h1>A Quantum Computer to Run a Classical Algorithm</h1>
+</header>
+<main>
+
+<section>
+<h2>Statement of the Problem</h2>
+<p>
+Current implementations of Topological Quantum computers
+can only produce abelian anyons.
+This is considered a big problem,
+because the induced representations of the braid group
+are all 'just' permutation representations,
+which are not enough universal quantum computation.
+</p>
+<p>
+A lot of effort has been done to solve this problem
+either on the hardware or the software side of things.
+In the hardware side,
+we're trying to produce non-abelian anyons,
+a goal towards which a first step would be
+to produce a Majorana fermion,
+a milestone which we have not achieved.
+In the software side,
+we have explored the idea of using boundaries or measurements,
+without a lot of success.
+</p>
+<p>
+So, we want oranges, but nature is giving us lemons.
+Can we make lemonade?
+</p>
+</section>
+
+<section>
+<h2>Proposal</h2>
+<p>
+A permutation representation of the braid group is,
+well, just an implementation of the permutation group, <var>perm_group(n)</var>.
+But that is already something, right?
+My guess is that a binary computer has a lot of trouble
+doing computations in <var>perm_group(n)</var>.
+Just storing a permutation must be quite something.
+The size of <var>perm_group(n)</var> is <code>n!</code>,
+so specifying a permutation requires <code>log <sub>2</sub> n! </code> bits,
+which by Stirling approximations is roughly
+</p>
+<p><code> n log <sub>2</sub> n - n log <sub>2</sub> e </code></p>
+<p>
+Ok, not exponential, not even quadratic, but still.
+Worst case scenario, the Bruhat length of a permutation is <code>2n</code>, (I think)
+so there is some improvement there.
+</p>
+<p>
+Anyway, the things is that this underestimated quantum computer
+performs operations in <var>perm_group(n)</var>
+'naturally'.
+Perhaps it can solve problems there a little faster,
+stuff related with total positivity and number of transpositions in a permutation.
+There is hope of this,
+because it can implement quantum superpositions of these permutations,
+so it can implement stuff 'a la' Shor.
+</p>
+<p>
+Even if you only implement classical algorithms on <var>perm_group(n)</var>,
+it does so in a natural way.
+You don't have to code into 1's and 0's,
+perform the calculation,
+and then go back.
+In other words, you don't have to compile anything,
+it will be the natural language of the computer.
+It's like the abacus for permutations.
+</p>
+</section>
+
+<section>
+<h2>Relevance</h2>
+<p>
+It's making lemonade out of currently existing lemons.
+Write the code, send it to Microsoft.
+They should be able to run it tomorrow.
+If it proves faster than a classical computer,
+you have a NYTs article.
+</p>
+<p>
+More deeply.
+who said that we need a universal computer?
+yeah, the solid state implementations have universality as a feature,
+so it makes sense that you write code making use of that feature.
+But we don't.
+So let's stop trying to adopt their standard
+and use what we have.
+</p>
+<p>
+But even if you did have quantum universality,
+quantum gates are so counterintuitive
+that we don't know how to write code for them.
+We have Schor, we have Grover, and that's basically it.
+In constrast, Mayas were doing stuff with braidings.
+All finite groups are subgroups of permutation groups.
+And so on. 
+</p>
+</section>
+
+<section>
+<h2>Updates</h2>
+<section>
+<h3>Update title</h3>
+<p>
+Update text
+</p>
+</section>
+
+
+</section>
+
+</main>
+</body>
+</html>
